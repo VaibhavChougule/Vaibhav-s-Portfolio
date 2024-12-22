@@ -1,179 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaibhav's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu.css' rel='stylesheet'>
 </head>
+
 <body>
-    <div class="main">
+    <div class="main" id="home">
         <div class="navigation">
             <div class="nav-items">
-                <li>Home</li>
-                <a href="#education-field"><li>Education</li></a>
-                <li>Projects</li>
+                <a href="#home">
+                    <li>Home</li>
+                </a>
+                <a href="#education-field">
+                    <li>Education</li>
+                </a>
+                <a href="#projects">
+                    <li>Projects</li>
+                </a>
                 <div class="logo">VC</div>
-                <li>Skills</li>
+                <a href="#skills">
+                    <li>Skills</li>
+                </a>
                 <li>Resume</li>
-                <li>Contact</li>
+                <a href="#contact">
+                    <li>Contact</li>
+                </a>
             </div>
+
         </div>
+        <button class="menuIcon">Menu</button>
         <div class="content-body">
-            <div class="about-text">
-                <div>
-                    <h1>I'm Vaibhav</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br> Nobis aperiam facilis vero commodi doloribus, in ad recusandae quaerat<br> numquam labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, soluta!</p>
+            <div class="about-text body-section">
+                <div id="about-info">
+                    <h1 class="name-heading"></h1>
+                    <p>"I'm a passionate <span class="desg" style="color: #1600b1; font-weight: bolder;">software
+                            developer</span> skilled in full-stack development. With a strong foundation in <span
+                            style="color: red; font-weight: bold; font-style: oblique;">problem-solving</span> and DSA,
+                        I build efficient and scalable solutions for real-world challenges."</p>
                     <div class="home-text-btn">
-                        <button>Education</button>
+                        <a href="#education-field"><button>Education</button></a>
                         <button>Resume</button>
                     </div>
                 </div>
             </div>
-            <div class="my-picture">
-                <img src="https://www.hindustantimes.com/static-content/1y/cricket-logos/players/virat-kohli.png" alt="">
+            <div class="my-picture body-section">
+                <img src="images\vaibhavimage.jpg" alt="">
             </div>
         </div>
-    </div>
-    <div class="main">
-    <div class="Education-main" id="education-field">
-        <div class="head">
-            <h3>Vaibhav Chougule</h3>
-            <h1>Education</h1>
-        </div>
-        <div class="Education-body">
-            <div class="schooling-section">
-                <img src="https://images.unsplash.com/photo-1578593139939-cccb1e98698c?q=80&w=1793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                <h3>Schooling - 91%</h3>
-                <p>Kadlas HighSchool<br>2014-2020</p>
-            </div>
-            <div class="jc-section">
-                <img src="https://media.istockphoto.com/id/1297580844/photo/medical-students-writing-examination-paper.jpg?s=612x612&w=0&k=20&c=QFp2Qi5OoIFrmeB_90A4oukc7q17WK1oYzmgzMnkS1Y=" alt="">
-                <h3>Junior College - 73.60%</h3>
-                <p>Sangola Vidyamadir & JR. College <br>2020-2022</p>
-            </div>
-            <div class="be-section">
-                <img src="https://media.istockphoto.com/id/1363276509/photo/teacher-giving-computer-science-lecture-to-diverse-multiethnic-group-of-female-and-male.jpg?s=2048x2048&w=is&k=20&c=v4fS7CQWx6h4samL01XrXGnf4baEXNM0HoCulimjnyw=" alt="">
-                <h3>B.E - 8.25 CGPA</h3>
-                <p>Smt. Kashibai Navale COE , PUNE <br>2022-2026</p>
-            </div>
-        </div>
-    </div>
     </div>
 
-    <div class="project-container">
+
+    <!-- here project section starts -->
+    <div class="main">
+        <div class="Education-main" id="education-field">
+            <div class="head">
+                <h3>Vaibhav Chougule</h3>
+                <h1>Education</h1>
+            </div>
+            <div class="Education-body">
+                <div class="schooling-section">
+                    <img src="https://images.unsplash.com/photo-1578593139939-cccb1e98698c?q=80&w=1793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <h3>Schooling - 91%</h3>
+                    <p>Kadlas HighSchool<br>2014-2020</p>
+                </div>
+                <div class="jc-section">
+                    <img src="https://media.istockphoto.com/id/1297580844/photo/medical-students-writing-examination-paper.jpg?s=612x612&w=0&k=20&c=QFp2Qi5OoIFrmeB_90A4oukc7q17WK1oYzmgzMnkS1Y="
+                        alt="">
+                    <h3>Junior College - 73.60%</h3>
+                    <p>Sangola Vidyamadir & JR. College <br>2020-2022</p>
+                </div>
+                <div class="be-section">
+                    <img src="https://media.istockphoto.com/id/1363276509/photo/teacher-giving-computer-science-lecture-to-diverse-multiethnic-group-of-female-and-male.jpg?s=2048x2048&w=is&k=20&c=v4fS7CQWx6h4samL01XrXGnf4baEXNM0HoCulimjnyw="
+                        alt="">
+                    <h3>B.E(pursuing) - 8.25 CGPA</h3>
+                    <p>Smt. Kashibai Navale COE , PUNE <br>2022-2026</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-container" id="projects">
         <div class="project">
-            <h2>Project 1</h2>
-            <p>Category: Web Development</p>
-            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
-            <a href="#" class="btn">View Project</a>
+            <h2>FoodDiscovery</h2>
+            <p><span><b>Category:</b></span> Full Stack Web Application</p>
+            <p><span><b>Tech-Stack:</b></span> The project is built using frontend Technologie <b>React JS</b> , backend
+                using <b>Node JS</b> , and <b>MongoDB</b> Database <br>
+
+                <span><b>Description:</b></span> Here in this web app Restorent owners can register there resto. and add
+                and Update there MenuCard and User can be able to see the MenuCard
+            </p>
+            <a href="https://food-discovery.vercel.app/" class="btn">View Project</a>
         </div>
         <div class="project">
             <h2>Project 2</h2>
             <p>Category: Mobile App Development</p>
-            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+            </p>
             <a href="#" class="btn">View Project</a>
         </div>
         <div class="project">
             <h2>Project 3</h2>
             <p>Category: Data Science</p>
-            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+            </p>
             <a href="#" class="btn">View Project</a>
         </div>
         <div class="project">
             <h2>Project 4</h2>
             <p>Category: Artificial Intelligence</p>
-            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+            </p>
             <a href="#" class="btn">View Project</a>
         </div>
         <div class="project">
             <h2>Project 5</h2>
             <p>Category: UI/UX Design</p>
-            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+            </p>
             <a href="#" class="btn">View Project</a>
         </div>
         <div class="project">
             <h2>Project 6</h2>
             <p>Category: Blockchain</p>
-            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+            </p>
             <a href="#" class="btn">View Project</a>
         </div>
     </div>
 
-    <div class="skills-section">
+    <div class="skills-section" id="skills">
         <h2 class="my-skills">My Skills</h2>
-        <div class="first-row-of-cateory">
         <div class="category">
-            <h3>Frontend Technologies</h3>
+            <h3>Programming Languages</h3>
             <div class="skills-container">
                 <div class="skill">
-                    <img src="html.png" alt="HTML">
-                    <span>HTML</span>
+
+                    <span>C++</span>
                 </div>
                 <div class="skill">
-                    <img src="css.png" alt="CSS">
-                    <span>CSS</span>
+
+                    <span>Python</span>
                 </div>
                 <div class="skill">
-                    <img src="javascript.png" alt="JavaScript">
+
+                    <span>Java</span>
+                </div>
+                <div class="skill">
+
                     <span>JavaScript</span>
                 </div>
-                <div class="skill">
-                    <img src="React.png" alt="React">
-                    <span>React</span>
+
+            </div>
+        </div>
+        <div class="first-row-of-cateory">
+            <div class="category">
+                <h3>Frontend Technologies</h3>
+                <div class="skills-container">
+                    <div class="skill">
+
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill">
+
+                        <span>CSS</span>
+                    </div>
+
+                    <div class="skill">
+
+                        <span>React</span>
+                    </div>
+                    <div class="skill">
+
+                        <span>Tailwind</span>
+                    </div>
                 </div>
-                <div class="skill">
-                    <img src="Tailwind.png" alt="Tailwind">
-                    <span>Tailwind</span>
+            </div>
+
+            <div class="category">
+                <h3>Backend Technologies</h3>
+                <div class="skills-container">
+                    <div class="skill">
+
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill">
+
+                        <span>Express.js</span>
+                    </div>
+                    <!-- Add more backend skills here -->
                 </div>
             </div>
         </div>
-        <div class="category">
-            <h3>Backend Technologies</h3>
-            <div class="skills-container">
-                <div class="skill">
-                    <img src="nodejs.png" alt="Node.js">
-                    <span>Node.js</span>
+        <div class="second-row-of-categry">
+            <div class="category">
+                <h3>Database</h3>
+                <div class="skills-container">
+                    <div class="skill">
+
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="skill">
+
+                        <span>MySQL</span>
+                    </div>
+                    <!-- Add more database skills here -->
                 </div>
-                <div class="skill">
-                    <img src="express.png" alt="Express.js">
-                    <span>Express.js</span>
+            </div>
+            <div class="category">
+                <h3>Version Control Systems</h3>
+                <div class="skills-container">
+                    <div class="skill">
+
+                        <span>Git</span>
+                    </div>
+                    <div class="skill">
+
+                        <span>GitHub</span>
+                    </div>
+                    <!-- Add more VCS skills here -->
                 </div>
-                <!-- Add more backend skills here -->
             </div>
         </div>
     </div>
-    <div class="second-row-of-categry">
-        <div class="category">
-            <h3>Database</h3>
-            <div class="skills-container">
-                <div class="skill">
-                    <img src="mongodb.png" alt="MongoDB">
-                    <span>MongoDB</span>
-                </div>
-                <div class="skill">
-                    <img src="mysql.png" alt="MySQL">
-                    <span>MySQL</span>
-                </div>
-                <!-- Add more database skills here -->
-            </div>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <h2>Contact Details</h2>
+            <ul>
+                <li><span class="contact-icon">&#9742;</span> Phone: +91 9322705181</li>
+                <li><span class="contact-icon">&#9993;</span> Email: vaibhavchougule475@gmail.com</li>
+                <li><span class="contact-icon">&#128100;</span> GitHub: <a
+                        href="https://github.com/vaibhavchougule">github.com/vaibhavchougule</a></li>
+                <li><span class="contact-icon"></span> LinkedIn: <a
+                        href="https://linkedin.com/in/vaibhav-chougule-386347237">linkedin.com/in/vaibhav-chougule</a>
+                </li>
+                <li><span class="contact-icon">&#127968;</span> Address: A/P- Javala 413309 , Tal-Sangola, Solapur,
+                    India</li>
+            </ul>
         </div>
-        <div class="category">
-            <h3>Version Control Systems</h3>
-            <div class="skills-container">
-                <div class="skill">
-                    <img src="git.png" alt="Git">
-                    <span>Git</span>
-                </div>
-                <div class="skill">
-                    <img src="github.png" alt="GitHub">
-                    <span>GitHub</span>
-                </div>
-                <!-- Add more VCS skills here -->
-            </div>
-        </div>
-    </div>
-    </div>
+    </section>
+
     <script src="main.js"></script>
 </body>
+
 </html>

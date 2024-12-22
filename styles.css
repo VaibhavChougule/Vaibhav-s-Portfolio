@@ -1,3 +1,5 @@
+
+
 *{
     margin: 0;
     padding: 0;
@@ -5,37 +7,51 @@
 }
 
 .main{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-    background-color:azure;
+    background-image:linear-gradient(to right , azure , rgb(161, 237, 237));
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    border-bottom: solid 1px rgb(109, 109, 216);
+    border-bottom: solid 1px rgb(128, 128, 248);
+    justify-content: center;
+    align-items: center;
+}
+@keyframes onload {
+    from{
+        width:0%
+    }
+    to{
+        width: 80%;
+    }
 }
 
-.navigation{
-
- flex-grow: 0.5;
- display: flex;
- justify-content: center;
- flex-direction: row;
- justify-content: center;
- align-items: center;
+.navigation {
+    position: fixed;
+    top: 5px;
+    /* left: 0; */
+    width: 5%;
+    z-index: 1000; /* Ensure it stays above other content */
+    background-color: #283fa6;
+    border-radius:40px ;
+    /* transition: width 2s; */
+    animation: onload 1s ease-out forwards;
+    
+    
 }
 
 .nav-items {
-    width: 90%; /* Adjusted width */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the navigation items horizontally */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 14px;
-    background-color: #283fa6;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 20px;
 }
 
-
-.nav-items li{
+.nav-items li {
     display: inline-block;
     color: whitesmoke;
     font-weight: bold;
@@ -43,17 +59,16 @@
     list-style: none;
     padding: 8px;
     border-radius: 5px;
-    
 }
 
-.nav-items  :hover{
+.nav-items li:hover {
     cursor: pointer;
     color: black;
     background-color: white;
-    transition-delay: 100ms;
+    transition-delay: 10ms;
 }
 
-.logo{
+.logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,70 +79,204 @@
     font-weight: bold;
 }
 
+.menuIcon{
+    display: none;
+}
+.menuIcon:hover{
+        background-color: #007bff;
+    }
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .menuIcon{
+        display: block;
+        position: relative;
+        top: 50px;
+        min-height: 40px;
+        min-width: 70px;
+        border: solid;
+        border-radius: 4px;
+        font-size: 20px;
+        font-weight: bolder;
+        background-color: blueviolet;
+    }
+    
+    
+    .navigation{
+        display: none;
+        position: relative;
+        width: 40%;
+        
+        
+    }
+    .nav-items {
+        display: flex; /* Show nav-items */
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center;
+        align-items: center;
+        background-color: #283fa6;
+        border-radius: 0; /* Reset border radius */
+        padding: 0; /* Reset padding */
+        /* position: absolute; */
+        top: 100%; /* Position below the logo */
+        left: 0;
+        width: 100%;
+        z-index: 1; /* Ensure it's above other content */
+    }
+
+    .nav-items li {
+        padding: 10px 20px; /* Adjusted padding */
+        border-radius: 0; /* Reset border radius */
+    }
+
+    .logo {
+         display: none; /*Hide logo on small screens */
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon */
+        color: white;
+        font-size: 24px;
+        margin-right: 20px; /* Adjusted margin */
+        cursor: pointer;
+    }
+}
+
+/* Content body */
 .content-body {
     flex-grow: 5;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column; /* Change flex direction to column for small screens */
     padding: 30px;
-    overflow-x: hidden; /* Added */
+    overflow-x: hidden;
+    
+    
 }
 
 
-.about-text{
+
+/* About text */
+.about-text {
     flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center; /* Center text */
+    /* width: 50vw; */
 }
 
-.about-text p{
-    text-wrap: wrap;
+.about-text p {
+    max-width: 100%; /* Set max width for paragraphs */
 }
 
 .about-text div h1 {
     font-weight: bolder;
     color: #5573fa;
-    font-family: Andale Mono, monospace;
+    font-family: 'Andale Mono', monospace; /* Change font family */
     margin: 5px;
-    font-size: xx-large;
+    font-size: 28px; /* Adjust font size */
 }
 
-.home-text-btn{
+#about-info{
     display: flex;
-    /* justify-content: center; */
+    flex-direction: column;
     align-items: center;
-    margin:8px;
-    
 }
-.home-text-btn button{
+
+#about-info p{
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 3rem;
+}
+
+@keyframes tilt {
+    from{
+        font-size: large;
+        transform: rotateX('0deg');
+    }
+    to{
+        font-size: larger;
+        transform: rotateX('20deg');
+    }
+}
+
+.desg{
+    /* animation-name: tilt;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse; */
+    animation: tilt 2s infinite alternate-reverse;
+}
+
+/* Home text buttons */
+.home-text-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+}
+
+.home-text-btn button {
     height: 30px;
-    width: 130px;
+    width: auto; /* Set width to auto for responsiveness */
     margin: 3px;
     padding: 7px;
     background-color: #132678;
     border: none;
     border-radius: 4px;
     color: white;
-    
 }
 
-.home-text-btn button:first-child{
+.home-text-btn button:first-child {
     background-color: black;
     color: white;
-    
 }
 
 .home-text-btn button:hover {
     background-color: #283fa6;
 }
 
-.my-picture{
+/* My picture */
+.my-picture {
     flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
+
+.my-picture img {
+    border-radius: 10px;
+    mix-blend-mode: darken;
+    background: transparent;
+    max-width: 50%; /* Set max width for image */
+    height: auto; /* Set height to auto for responsiveness */
+    width: 80%;
+}
+
+
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .content-body {
+        
+        flex-direction: row; /* Change flex direction to row for larger screens */
+    }
+
+    .about-text {
+        text-align: left; /* Align text to left for larger screens */
+    }
+
+    .home-text-btn {
+        justify-content: flex-start; /* Align buttons to left for larger screens */
+    }
+
+    .home-text-btn button {
+        width: 130px; /* Restore fixed width for buttons on larger screens */
+    }
+
+
+}
+
 
 
 
@@ -147,7 +296,7 @@ body, html {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: rgb(226, 228, 228);
+    background-color: rgb(228, 255, 255);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Ensures content doesn't overflow */
@@ -210,6 +359,7 @@ body, html {
     font-size: 20px;
     margin-top: 10px;
     color: #333;
+    word-wrap:break-word;
   }
   
   .schooling-section p,
@@ -228,22 +378,60 @@ body, html {
     }
   }
 
+  @keyframes drop {
+    from{
+        position: relative;
+        top: 10px;
+        /* background-color: red; */
+    }
+    to{
+       position: relative;
+       /* background-color: blue; */
+       top: 40px;
+       
+    }
+  }
+
+  .schooling-section{
+    animation: drop 2s infinite alternate;
+  }
+  .jc-section{
+    animation: drop 2s infinite alternate;
+    animation-delay: 1s;
+  }
+  .be-section{
+    animation: drop 2s infinite alternate;
+    animation-delay: 1.5s;
+  }
+
 
   .project-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
+    /*margin-bottom: 50px;  Default margin */
+    border-bottom: solid 1px rgb(50, 156, 194);
 }
 
+@media screen and (max-width: 768px) {
+    .project-container {
+        margin-bottom: 0px;  /*Margin for small screens */
+        /* margin-bottom: 100vh; */
+    }
+}
+
+
 .project {
+    max-height: 100vh;
     width: 300px;
     margin: 20px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
     text-align: center;
+    background-color: #dcdfdf;
 }
 
 .project h2 {
@@ -252,8 +440,12 @@ body, html {
 }
 
 .project p {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 10px;
+    font-weight: 500;
+}
+.project p span{
+    color: #0d2696;
 }
 
 .btn {
@@ -270,17 +462,30 @@ body, html {
     background-color: #0056b3;
 }
 
+@media (min-width:2038px){
+    .project-container{
+        height:60vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .project{
+        max-height: 50vh;
+    }
+    
+}
+
   
 /* skills section */
 
 .skills-section {
-    /* height: 100vh; */
+    height: fit-content;
     text-align: center;
     padding: 50px 0;
     display: flex;
     flex-direction: column; /* Align items vertically */
     align-items: center; /* Center items horizontally */
     background-color: aliceblue;
+    margin-bottom: 50px; /* Add margin to the bottom */
 }
 
 .my-skills {
@@ -407,3 +612,51 @@ body, html {
     }
 }
 
+/* contact secton */
+
+
+.contact-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+    
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-container h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.contact-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-container ul li {
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-container ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 0 20px;
+    }
+}
